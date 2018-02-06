@@ -1,9 +1,9 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="http://CharlesMatthews.github.io" resolutions="1x" timestamp="1517958877066">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="http://CharlesMatthews.github.io" resolutions="1x" timestamp="1517959409776">
   <folder name="css">
     <file name="site_global.css" crc="4154280382"/>
     <file name="about-me.css" crc="29080905" ref="about-me"/>
-    <file name="index.css" crc="3987048776" ref="index"/>
-    <file name="nomq_index.css" crc="30481293" ref="index"/>
+    <file name="index.css" crc="354827683" ref="index"/>
+    <file name="nomq_index.css" crc="3786926576" ref="index"/>
     <file name="misc.css" crc="4212663477" ref="misc"/>
     <file name="project-overview.css" crc="4212663477" ref="project-overview"/>
   </folder>
@@ -32,13 +32,13 @@
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
     </file>
-    <file name="u11719-4.png" crc="207249826" ref="index"/>
+    <file name="u11719-4.png" crc="151733414" ref="index"/>
     <file name="u11626-6.png" crc="426469436" ref="index"/>
     <file name="uk-union-flag.png" crc="482240589" seo="true" ref="index">
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
     </file>
-    <file name="u12950-4.png" crc="207249826" ref="index"/>
+    <file name="u12950-4.png" crc="4274560076" ref="index"/>
     <file name="blank.gif" crc="4208392903" ref="index:about-me"/>
     <file name="ico_ham.svg" crc="3975549554" ref="index:about-me"/>
     <file name="ico_ham_poster_u1881.png" crc="11301426" ref="index:about-me"/>
@@ -49,7 +49,7 @@
       <caption webpage="about-me" alt=""/>
     </file>
   </folder>
-  <file name="index.html" crc="3929993565" seo="true" mt="1517958850839" redirect="true"/>
+  <file name="index.html" crc="263310692" seo="true" mt="1517959371972" redirect="true"/>
   <file name="about-me.html" crc="237781601" seo="true" mt="1517957947147" redirect="true"/>
   <file name="project-overview.html" crc="356632093" seo="true" mt="1517958373335" redirect="false"/>
   <file name="misc.html" crc="4178997508" seo="true" mt="1517958403593" redirect="false"/>
