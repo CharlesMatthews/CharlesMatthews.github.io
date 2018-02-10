@@ -1,9 +1,9 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="http://CharlesMatthews.github.io" resolutions="1x" timestamp="1518306202237">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="http://CharlesMatthews.github.io" resolutions="1x" timestamp="1518306540000">
   <folder name="css">
     <file name="site_global.css" crc="4154280382"/>
-    <file name="misc.css" crc="190804701" ref="misc"/>
-    <file name="about-me.css" crc="4045835954" ref="about-me"/>
-    <file name="nomq_about-me.css" crc="4142465257" ref="about-me"/>
+    <file name="misc.css" crc="95952570" ref="misc"/>
+    <file name="about-me.css" crc="4145019694" ref="about-me"/>
+    <file name="nomq_about-me.css" crc="4178764472" ref="about-me"/>
     <file name="projects.css" crc="4212663477" ref="projects"/>
     <file name="index.css" crc="4129412571" ref="index"/>
     <file name="nomq_index.css" crc="3848101272" ref="index"/>
@@ -73,7 +73,7 @@
     <file name="loading.gif" crc="3815509949" ref="misc"/>
   </folder>
   <file name="index.html" crc="4161154743" seo="true" mt="1518305901050" redirect="true"/>
-  <file name="about-me.html" crc="3930434999" seo="true" mt="1518306186856" redirect="true"/>
+  <file name="about-me.html" crc="4052231635" seo="true" mt="1518306500847" redirect="true"/>
   <file name="projects.html" crc="3985347898" seo="true" mt="1518304332950" redirect="false"/>
-  <file name="misc.html" crc="3957841250" seo="true" mt="1518298787642" redirect="true"/>
+  <file name="misc.html" crc="125719518" seo="true" mt="1518306438194" redirect="true"/>
 </manifest>
