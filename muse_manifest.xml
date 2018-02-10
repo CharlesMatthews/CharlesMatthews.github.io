@@ -1,32 +1,32 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="http://CharlesMatthews.github.io" resolutions="1x" timestamp="1518305102663">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="http://CharlesMatthews.github.io" resolutions="1x" timestamp="1518306011386">
   <folder name="css">
     <file name="site_global.css" crc="4154280382"/>
-    <file name="about-me.css" crc="373400589" ref="about-me"/>
+    <file name="misc.css" crc="190804701" ref="misc"/>
+    <file name="about-me.css" crc="217213667" ref="about-me"/>
+    <file name="nomq_about-me.css" crc="500526280" ref="about-me"/>
+    <file name="projects.css" crc="4212663477" ref="projects"/>
     <file name="index.css" crc="4129412571" ref="index"/>
     <file name="nomq_index.css" crc="3848101272" ref="index"/>
-    <file name="misc.css" crc="190804701" ref="misc"/>
-    <file name="projects.css" crc="4212663477" ref="projects"/>
-    <file name="nomq_about-me.css" crc="218922208" ref="about-me"/>
   </folder>
   <folder name="assets">
     <file name="cursor.ico" crc="506857142" seo="true" mt="1479937884000"/>
     <file name="sky-high.mp4" crc="3870292798" seo="true" mt="1479836071000"/>
   </folder>
   <folder name="scripts">
-    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:about-me:misc:projects"/>
-    <file name="museutils.js" crc="3803043152" ref="index:about-me:misc:projects"/>
-    <file name="whatinput.js" crc="86476730" ref="index:about-me:misc:projects"/>
-    <file name="museconfig.js" crc="4153641093" ref="index:about-me:misc:projects"/>
-    <file name="jquery.watch.js" crc="99325471" ref="index:about-me:misc:projects"/>
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:about-me:projects:misc"/>
+    <file name="museutils.js" crc="3803043152" ref="index:about-me:projects:misc"/>
+    <file name="whatinput.js" crc="86476730" ref="index:about-me:projects:misc"/>
+    <file name="museconfig.js" crc="4153641093" ref="index:about-me:projects:misc"/>
+    <file name="jquery.watch.js" crc="99325471" ref="index:about-me:projects:misc"/>
     <file name="jquery.museresponsive.js" crc="3955820958" ref="index:about-me"/>
-    <file name="require.js" crc="4157109226" ref="index:about-me:misc:projects"/>
-    <file name="webpro.js" crc="242022427" ref="misc:about-me"/>
-    <file name="musewpslideshow.js" crc="457073769" ref="misc:about-me"/>
-    <file name="jquery.museoverlay.js" crc="483674903" ref="misc:about-me"/>
-    <file name="touchswipe.js" crc="4066113679" ref="misc:about-me"/>
+    <file name="require.js" crc="4157109226" ref="index:about-me:projects:misc"/>
+    <file name="webpro.js" crc="242022427" ref="about-me:misc"/>
+    <file name="musewpslideshow.js" crc="457073769" ref="about-me:misc"/>
+    <file name="jquery.museoverlay.js" crc="483674903" ref="about-me:misc"/>
+    <file name="touchswipe.js" crc="4066113679" ref="about-me:misc"/>
   </folder>
   <folder name="images">
-    <file name="favicon.ico" crc="3770389445" ref="index:about-me"/>
+    <file name="favicon.ico" crc="3770389445" ref="index"/>
     <file name="img_20170809_135218 (1).jpg" crc="467792258" seo="true" ref="index">
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
@@ -38,22 +38,8 @@
       <caption webpage="index" alt=""/>
     </file>
     <file name="u12950-4.png" crc="4274560076" ref="index"/>
-    <file name="blank.gif" crc="4208392903" ref="index:misc:about-me"/>
     <file name="u11626-62.png" crc="3800553449" ref="index"/>
-    <file name="sky-12.jpg" crc="67604782" ref="about-me">
-      <caption webpage="about-me" alt=""/>
-      <caption webpage="about-me" alt=""/>
-    </file>
-    <file name="cactus.jpg" crc="491424337" seo="true" ref="misc">
-      <caption webpage="misc" alt=""/>
-    </file>
-    <file name="road.jpg" crc="180693847" seo="true" ref="misc">
-      <caption webpage="misc" alt=""/>
-    </file>
-    <file name="trees.jpg" crc="4071309946" seo="true" ref="misc">
-      <caption webpage="misc" alt=""/>
-    </file>
-    <file name="loading.gif" crc="3815509949" ref="misc"/>
+    <file name="blank.gif" crc="4208392903" ref="index:about-me:misc"/>
     <file name="u15314-6.png" crc="141199862" ref="about-me"/>
     <file name="img_20170809_135218.jpg" crc="354855415" seo="true" ref="about-me">
       <caption webpage="about-me" alt=""/>
@@ -69,11 +55,25 @@
     <file name="img_8984-animation.gif" crc="3824858179" seo="true" ref="about-me">
       <caption webpage="about-me" alt=""/>
     </file>
+    <file name="sky-12.jpg" crc="67604782" ref="about-me">
+      <caption webpage="about-me" alt=""/>
+      <caption webpage="about-me" alt=""/>
+    </file>
     <file name="u15314-62.png" crc="141199862" ref="about-me"/>
     <file name="u15454-42.png" crc="93711336" ref="about-me"/>
+    <file name="cactus.jpg" crc="491424337" seo="true" ref="misc">
+      <caption webpage="misc" alt=""/>
+    </file>
+    <file name="road.jpg" crc="180693847" seo="true" ref="misc">
+      <caption webpage="misc" alt=""/>
+    </file>
+    <file name="trees.jpg" crc="4071309946" seo="true" ref="misc">
+      <caption webpage="misc" alt=""/>
+    </file>
+    <file name="loading.gif" crc="3815509949" ref="misc"/>
   </folder>
-  <file name="index.html" crc="4161154743" seo="true" mt="1518304502358" redirect="true"/>
-  <file name="about-me.html" crc="4137053394" seo="true" mt="1518305088054" redirect="true"/>
-  <file name="misc.html" crc="3957841250" seo="true" mt="1518298787642" redirect="true"/>
+  <file name="index.html" crc="4161154743" seo="true" mt="1518305901050" redirect="true"/>
+  <file name="about-me.html" crc="307433114" seo="true" mt="1518305990241" redirect="true"/>
   <file name="projects.html" crc="3985347898" seo="true" mt="1518304332950" redirect="false"/>
+  <file name="misc.html" crc="3957841250" seo="true" mt="1518298787642" redirect="true"/>
 </manifest>
