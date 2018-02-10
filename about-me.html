@@ -10,25 +10,411 @@
 document.documentElement.className = document.documentElement.className.replace(/\bnojs\b/g, 'js');
 
 // Check that all required assets are uploaded and up-to-date
-if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "jquery.musemenu.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "require.js", "about-me.css"], "outOfDate":[]};
+if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["museutils.js", "museconfig.js", "jquery.watch.js", "require.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "about-me.css"], "outOfDate":[]};
 </script>
   
-  <link rel="shortcut icon" href="images/favicon.ico?crc=22025870"/>
+  <link rel="shortcut icon" href="images/favicon.ico?crc=3770389445"/>
   <title>About Me</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=4154280382"/>
-  <link rel="stylesheet" type="text/css" href="css/about-me.css?crc=29080905" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/about-me.css?crc=4255072456" id="pagesheet"/>
   <!-- JS includes -->
-  <!--[if lt IE 9]>
-  <script src="scripts/html5shiv.js?crc=4241844378" type="text/javascript"></script>
-  <![endif]-->
-  <script src="https://use.typekit.net/ik/Hoi_PPJhWJxVU-QVVW5V1Ck3Xnt9eFww3tbAkAc-yNbfeCjgfFPj_3IPH2wowQ6owD4LZ2gqjQFKZR63wAIUFhbhFQs8wQbawQyyFQJojRmqZ2q-9kG0jhyyScU8ShuyiYsGZWiDOciTieyujKoTdkUR-eBkdemDdABXiey8iaw0Zh8X-YmKOc8zOYiaikoR-eBkdemDdABXiey8iaw0Zh8X-YmKOc8zJ68zdAo8Sku3ScvKIcuuShmzOWFyd1wlScNudcs8ZfG4fOGrIMMjMKMgH6qJXXXbMs6YJMBHgIuuShAbMjL1EFwB.js" type="text/javascript"></script>
+  <script src="https://use.typekit.net/ik/Sz2euvp12iNPmRrcAp5jCEmzJmhUhn1gi_bNiRwMoyCfenMgfFPj_3IPH2wowQ6owD4LZ2gqjQFKZR63wAIUFhbhFQs8wQbawQyyFQJojRmqZ2q-9kG0jhyyScU8ShuyiYsGZWiDOciTieyujKoTdkUR-eBkdemDdABXiey8iaw0Zh8X-YmKOc8zOYiaikoR-eBkdemDdABXiey8iaw0Zh8X-YmKOc8zJy4liWF8dkuDjAoDOW4ziAoqZAb7fbRQQsMMeMS6M9GIQWmDZZMgxx1NX39.js" type="text/javascript"></script>
   <!-- Other scripts -->
   <script type="text/javascript">
    try {Typekit.load();} catch(e) {}
 </script>
     <!--HTML Widget code-->
   
+<style>
+.menu-toggle{
+	flex:0 0 auto;
+	width:40px;
+	height:40px;
+	border:3px solid #000000;
+    box-sizing: border-box;
+	cursor:pointer;
+	position:relative;
+}
+.hamburger,.cross{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.hamburger span{
+	display:block;
+	width:19px;
+	height:2px;
+	margin-bottom:3px;
+	overflow:hidden;
+	position:relative;
+}
+.hamburger span:last-child{
+	margin:0;
+}
+.hamburger span:before,.hamburger span:after{
+	content:"";
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:#FFFFFF;
+	transform:translateX(-200%);
+	transition:transform ease 300ms;
+}
+.hamburger span:after{
+	transform:translateX(0);
+}
+.hamburger span:nth-child(2):before,.hamburger span:nth-child(2):after{
+	transition-delay:75ms;
+}
+.hamburger span:last-child:before,.hamburger span:last-child:after{
+	transition-delay:150ms;
+}
+.menu-toggle:hover .hamburger span:before{
+	transform:translateX(0);
+}
+.menu-toggle:hover .hamburger span:after{
+	transform:translateX(200%);
+}
+.menu-toggle.active .hamburger span:before{
+	transform:translateX(100%);
+}
+.menu-toggle.active .hamburger span:after{
+	transform:translateX(200%);
+}
+.cross span{
+	display:block;
+	width:18px;
+	height:3px;
+	background-color:#FFFFFF;
+	transform:translateY(50%) rotate(45deg) scaleX(0);
+	transition:transform ease 200ms;
+}
+.cross span:last-child{
+	transform:translateY(-50%) rotate(-45deg) scaleX(0);
+}
+.menu-toggle.active .cross span{
+	transition-delay:450ms;
+	transform:translateY(50%) rotate(45deg) scaleX(1);
+}
+.menu-toggle.active .cross span:last-child{
+	transform:translateY(-50%) rotate(-45deg) scaleX(1);
+}
+</style>
+	
+		<style>
+.u15912 {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  background: #000000;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  color: #FFFFFF;
+  height: 60px;
+  width: 100%;
+  opacity:1;
+}
+.u15912:hover .u15912outline-button__line {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.u15912outline-button__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity:1;
+}
+
+.u15912outline-button__line {
+  background: #00AEF0;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.u15912outline-button__line--horizontal {
+  width: 100%;
+  height: 3px;
+  -webkit-transition-delay: 0.27273s;
+          transition-delay: 0.27273s;
+}
+.u15912outline-button__line--vertical {
+  width: 3px;
+  height: 100%;
+  -webkit-transition-delay: none;
+          transition-delay: none;
+}
+.u15912outline-button__line--top {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+}
+.u15912outline-button__line--right {
+  top: 0;
+  right: 0;
+width: 3px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.u15912outline-button__line--bottom {
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.u15912outline-button__line--left {
+  top: 0;
+  left: 0;
+  width: 3px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+</style>
+	
+		<style>
+.u15915 {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  background: #00A90A;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  color: #FFFFFF;
+  height: 68px;
+  width: 100%;
+  opacity:1;
+}
+.u15915:hover .u15915outline-button__line {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.u15915outline-button__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity:1;
+}
+
+.u15915outline-button__line {
+  background: #FFFFFF;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.u15915outline-button__line--horizontal {
+  width: 100%;
+  height: 3px;
+  -webkit-transition-delay: 0.27273s;
+          transition-delay: 0.27273s;
+}
+.u15915outline-button__line--vertical {
+  width: 3px;
+  height: 100%;
+  -webkit-transition-delay: none;
+          transition-delay: none;
+}
+.u15915outline-button__line--top {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+}
+.u15915outline-button__line--right {
+  top: 0;
+  right: 0;
+width: 3px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.u15915outline-button__line--bottom {
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.u15915outline-button__line--left {
+  top: 0;
+  left: 0;
+  width: 3px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+</style>
+	
+		<style>
+.u15914 {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  background: #FFF200;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  color: #000000;
+  height: 60px;
+  width: 100%;
+  opacity:1;
+}
+.u15914:hover .u15914outline-button__line {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.u15914outline-button__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity:1;
+}
+
+.u15914outline-button__line {
+  background: #000000;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.u15914outline-button__line--horizontal {
+  width: 100%;
+  height: 3px;
+  -webkit-transition-delay: 0.27273s;
+          transition-delay: 0.27273s;
+}
+.u15914outline-button__line--vertical {
+  width: 3px;
+  height: 100%;
+  -webkit-transition-delay: none;
+          transition-delay: none;
+}
+.u15914outline-button__line--top {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+}
+.u15914outline-button__line--right {
+  top: 0;
+  right: 0;
+width: 3px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.u15914outline-button__line--bottom {
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.u15914outline-button__line--left {
+  top: 0;
+  left: 0;
+  width: 3px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+</style>
+	
+		<style>
+.u15913 {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1) inset;
+  background: #00AEF0;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  color: #FFFFFF;
+  height: 60px;
+  width: 100%;
+  opacity:1;
+}
+.u15913:hover .u15913outline-button__line {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.u15913outline-button__lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity:1;
+}
+
+.u15913outline-button__line {
+  background: #FF6F01;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.u15913outline-button__line--horizontal {
+  width: 100%;
+  height: 3px;
+  -webkit-transition-delay: 0.27273s;
+          transition-delay: 0.27273s;
+}
+.u15913outline-button__line--vertical {
+  width: 3px;
+  height: 100%;
+  -webkit-transition-delay: none;
+          transition-delay: none;
+}
+.u15913outline-button__line--top {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+}
+.u15913outline-button__line--right {
+  top: 0;
+  right: 0;
+width: 3px;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.u15913outline-button__line--bottom {
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.u15913outline-button__line--left {
+  top: 0;
+  left: 0;
+  width: 3px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+</style>
+	
  <style>
 #video_background {
 				position: fixed;
@@ -85,56 +471,106 @@ a, .submit-btn, .Thumb:hover {
 
 		
   
-  <div class="clearfix" id="page"><!-- group -->
-   <div class="PamphletWidget clearfix widget_invisible" id="pamphletu12335" data-islightbox="true"><!-- none box -->
-    <div class="popup_anchor" id="u12341popup" data-lightbox="true">
-     <div class="ContainerGroup rgba-background clearfix" id="u12341"><!-- stack box -->
-      <div class="Container invi clearfix grpelem" id="u12342"><!-- group -->
-       <nav class="MenuBar clearfix grpelem" id="menuu12343"><!-- vertical box -->
-        <div class="MenuItemContainer borderbox clearfix colelem" id="u12351"><!-- horizontal box -->
-         <div class="MenuItem MenuItemWithSubMenu borderbox transition rgba-background clearfix grpelem" id="u12354"><!-- horizontal box -->
-          <div class="MenuItemLabel borderbox Nav_Menus clearfix grpelem" id="u12357-4"><!-- content -->
-           <h3>About Me</h3>
+  <div class="clearfix" id="page"><!-- column -->
+   <div class="position_content" id="page_position_content">
+    <div class="clearfix colelem" id="pu15362"><!-- group -->
+     <div class="grpelem" id="u15362"><!-- simple frame --></div>
+     <div class="clearfix grpelem" id="u15311"><!-- group -->
+      <img class="grpelem" id="u15314-6" alt="About Me" width="258" height="168" src="images/u15314-6.png?crc=141199862"/><!-- rasterized frame -->
+     </div>
+     <div class="PamphletWidget clearfix grpelem" id="pamphletu15755"><!-- none box -->
+      <div class="ThumbGroup clearfix grpelem" id="u15764"><!-- none box -->
+       <div class="popup_anchor" id="u15765popup">
+        <div class="Thumb popup_element clearfix" id="u15765"><!-- group -->
+         <div class="size_fixed grpelem" id="u15696"><!-- custom html -->
+          
+  <div class="menu-toggle">
+	<div class="hamburger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="cross">
+		<span></span>
+		<span></span>
+	</div>
+</div>
+
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="popup_anchor" id="u15756popup">
+       <div class="ContainerGroup clearfix" id="u15756"><!-- none box -->
+        <div class="Container invi clearfix grpelem" id="u15759"><!-- column -->
+         <div class="position_content" id="u15759_position_content">
+          <div class="size_fixed colelem" id="u15912"><!-- custom html -->
+           
+<a href="http://CharlesMatthews.github.io/projects.html" style="cursor: pointer">
+<button class="u15912">
+  Projects
+  <span class="u15912outline-button__lines">
+    <span class="u15912outline-button__line u15912outline-button__line--horizontal u15912outline-button__line--top"></span>
+    <span class="u15912outline-button__line u15912outline-button__line--vertical u15912outline-button__line--right"></span>
+    <span class="u15912outline-button__line u15912outline-button__line--horizontal u15912outline-button__line--bottom"></span>
+    <span class="u15912outline-button__line u15912outline-button__line--vertical u15912outline-button__line--left"></span>
+   </span>
+</button>
+</a>
+
+          </div>
+          <div class="size_fixed colelem" id="u15915"><!-- custom html -->
+           
+<a href="http://CharlesMatthews.github.io/index.html" style="cursor: pointer">
+<button class="u15915">
+  Home
+  <span class="u15915outline-button__lines">
+    <span class="u15915outline-button__line u15915outline-button__line--horizontal u15915outline-button__line--top"></span>
+    <span class="u15915outline-button__line u15915outline-button__line--vertical u15915outline-button__line--right"></span>
+    <span class="u15915outline-button__line u15915outline-button__line--horizontal u15915outline-button__line--bottom"></span>
+    <span class="u15915outline-button__line u15915outline-button__line--vertical u15915outline-button__line--left"></span>
+   </span>
+</button>
+</a>
+
+          </div>
+          <div class="size_fixed colelem" id="u15914"><!-- custom html -->
+           
+<a href="http://CharlesMatthews.github.io/misc.html" style="cursor: pointer">
+<button class="u15914">
+  Misc
+  <span class="u15914outline-button__lines">
+    <span class="u15914outline-button__line u15914outline-button__line--horizontal u15914outline-button__line--top"></span>
+    <span class="u15914outline-button__line u15914outline-button__line--vertical u15914outline-button__line--right"></span>
+    <span class="u15914outline-button__line u15914outline-button__line--horizontal u15914outline-button__line--bottom"></span>
+    <span class="u15914outline-button__line u15914outline-button__line--vertical u15914outline-button__line--left"></span>
+   </span>
+</button>
+</a>
+
+          </div>
+          <div class="size_fixed colelem" id="u15913"><!-- custom html -->
+           
+<a href="#" style="cursor: pointer">
+<button class="u15913">
+  ======
+  <span class="u15913outline-button__lines">
+    <span class="u15913outline-button__line u15913outline-button__line--horizontal u15913outline-button__line--top"></span>
+    <span class="u15913outline-button__line u15913outline-button__line--vertical u15913outline-button__line--right"></span>
+    <span class="u15913outline-button__line u15913outline-button__line--horizontal u15913outline-button__line--bottom"></span>
+    <span class="u15913outline-button__line u15913outline-button__line--vertical u15913outline-button__line--left"></span>
+   </span>
+</button>
+</a>
+
           </div>
          </div>
         </div>
-        <div class="MenuItemContainer borderbox clearfix colelem" id="u12358"><!-- horizontal box -->
-         <div class="MenuItem MenuItemWithSubMenu borderbox transition rgba-background clearfix grpelem" id="u12359"><!-- horizontal box -->
-          <div class="MenuItemLabel borderbox Nav_Menus clearfix grpelem" id="u12360-4"><!-- content -->
-           <h3>Project View</h3>
-          </div>
-         </div>
-        </div>
-        <div class="MenuItemContainer borderbox clearfix colelem" id="u12344"><!-- horizontal box -->
-         <div class="MenuItem MenuItemWithSubMenu borderbox transition rgba-background clearfix grpelem" id="u12345"><!-- horizontal box -->
-          <div class="MenuItemLabel borderbox Nav_Menus clearfix grpelem" id="u12347-4"><!-- content -->
-           <h3>Stats</h3>
-          </div>
-         </div>
-        </div>
-        <div class="MenuItemContainer borderbox clearfix colelem" id="u12365"><!-- horizontal box -->
-         <div class="MenuItem MenuItemWithSubMenu borderbox transition rgba-background clearfix grpelem" id="u12368"><!-- horizontal box -->
-          <div class="MenuItemLabel borderbox Nav_Menus clearfix grpelem" id="u12370-4"><!-- content -->
-           <h3>Misc</h3>
-          </div>
-         </div>
-        </div>
-       </nav>
+       </div>
       </div>
      </div>
-    </div>
-    <div class="ThumbGroup clearfix grpelem" id="u12337"><!-- none box -->
-     <div class="popup_anchor" id="u12338popup">
-      <div class="Thumb popup_element" id="u12338"><!-- simple frame --></div>
-     </div>
-    </div>
-    <div class="popup_anchor" id="u12336popup">
-     <div class="PamphletCloseButton PamphletLightboxPart popup_element transition" id="u12336"><!-- simple frame --></div>
-    </div>
-   </div>
-   <div class="clearfix grpelem" id="pu12176"><!-- column -->
-    <div class="size_fixed colelem" id="u12176"><!-- custom html -->
-     
+     <div class="size_fixed grpelem" id="u12176"><!-- custom html -->
+      
 
 <video id="video_background"     loop  autoplay>
     <source src="assets/sky-high.mp4" type="video/mp4">
@@ -144,21 +580,47 @@ Your browser does not support the video tag.
 </video>
 
 
+     </div>
     </div>
-    <div class="clearfix colelem" id="pu12130"><!-- group -->
-     <div class="size_fixed grpelem" id="u12130"><!-- custom html -->
-      
+    <div class="size_fixed colelem" id="u12130"><!-- custom html -->
+     
 
 		
-     </div>
-     <div class="size_fixed grpelem" id="u12116"><!-- custom html -->
+    </div>
+    <div class="clearfix colelem" id="pu15205"><!-- group -->
+     <div class="size_fixed grpelem" id="u15205"><!-- custom html -->
       
                 <div></div>
             
      </div>
+     <div class="browser_width grpelem" id="u15450-bw">
+      <div id="u15450"><!-- simple frame --></div>
+     </div>
+     <div class="clearfix grpelem" id="u15451"><!-- group -->
+      <div class="rounded-corners clip_frame clearfix grpelem" id="u15452"><!-- image -->
+       <img class="position_content" id="u15452_img" src="images/img_20170809_135218.jpg?crc=354855415" alt="" width="242" height="242"/>
+      </div>
+      <img class="grpelem" id="u15454-4" alt="Charles Matthews" width="494" height="53" src="images/u15454-4.png?crc=4028704543"/><!-- rasterized frame -->
+     </div>
+     <div class="clearfix grpelem" id="u15550-7"><!-- content -->
+      <p>Hello! I'm Charles.</p>
+      <p>&nbsp;</p>
+      <p>I am a student at Park House Sixth Form.</p>
+     </div>
     </div>
+    <div class="clearfix colelem" id="pu15995"><!-- group -->
+     <div class="clip_frame clearfix grpelem" id="u15995"><!-- image -->
+      <img class="position_content" id="u15995_img" src="images/img_8128-animation.gif?crc=4246577148" alt="" width="459" height="258"/>
+     </div>
+     <div class="clip_frame clearfix grpelem" id="u16007"><!-- image -->
+      <img class="position_content" id="u16007_img" src="images/img_9046-animation.gif?crc=406293037" alt="" width="387" height="258"/>
+     </div>
+     <div class="clip_frame clearfix grpelem" id="u16010"><!-- image -->
+      <img class="position_content" id="u16010_img" src="images/img_8984-animation.gif?crc=3824858179" alt="" width="386" height="258"/>
+     </div>
+    </div>
+    <div class="verticalspacer" data-offset-top="886" data-content-above-spacer="921" data-content-below-spacer="0"></div>
    </div>
-   <div class="verticalspacer" data-offset-top="0" data-content-above-spacer="436" data-content-below-spacer="1390"></div>
   </div>
   <!-- JS includes -->
   <script type="text/javascript">
@@ -178,13 +640,14 @@ var suppressMissingFileError = false
 l[1]:null,l=l&&l[2]?l[2]:null;switch(l.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");f.className+=" "+k;k=a(c(f,"color"));l=a(c(f,"backgroundColor"));k!=0||l!=0?(Muse.assets.required.splice(h,1),"undefined"!=typeof b[i]&&(k!=b[i]>>>24||l!=(b[i]&16777215))&&Muse.assets.outOfDate.push(i)):h++;f.className="version";break;case "js":h++;break;default:throw Error("Unsupported file type: "+l);}}d?d().jquery!="1.8.3"&&Muse.assets.outOfDate.push("jquery-1.8.3.min.js"):Muse.assets.required.push("jquery-1.8.3.min.js");
 f.parentNode.removeChild(f);if(Muse.assets.outOfDate.length||Muse.assets.required.length)f="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",g&&Muse.assets.outOfDate.length&&(f+="\nOut of date: "+Muse.assets.outOfDate.join(",")),g&&Muse.assets.required.length&&(f+="\nMissing: "+Muse.assets.required.join(",")),suppressMissingFileError?(f+="\nUse SuppressMissingFileError key in AppPrefs.xml to show missing file error pop up.",console.log(f)):alert(f)};location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi)?
 setTimeout(function(){g(!0)},5E3):g()}};
-var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","jquery.musemenu","webpro","musewpslideshow","jquery.museoverlay","touchswipe","jquery.watch"],function(d){var $ = d;$(document).ready(function(){try{
+var muse_init=function(){require.config({baseUrl:""});require(["jquery","museutils","whatinput","webpro","musewpslideshow","jquery.museoverlay","touchswipe","jquery.watch"],function(d){var $ = d;$(document).ready(function(){try{
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
+Muse.Utils.resizeHeight('.browser_width');/* resize height */
+Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
-Muse.Utils.initWidget('.MenuBar', ['#bp_infinity'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
-Muse.Utils.initWidget('#pamphletu12335', ['#bp_infinity'], function(elem) { return new WebPro.Widget.ContentSlideShow(elem, {contentLayout_runtime:'lightbox',event:'click',deactivationEvent:'none',autoPlay:false,displayInterval:3000,transitionStyle:'fading',transitionDuration:300,hideAllContentsFirst:true,shuffle:false,enableSwipe:true,resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false,isResponsive:false}); });/* #pamphletu12335 */
+Muse.Utils.initWidget('#pamphletu15755', ['#bp_infinity'], function(elem) { return new WebPro.Widget.ContentSlideShow(elem, {contentLayout_runtime:'loose',event:'click',deactivationEvent:'mouseout_click',autoPlay:false,displayInterval:3000,transitionStyle:'fading',transitionDuration:500,hideAllContentsFirst:true,shuffle:false,enableSwipe:false,resumeAutoplay:true,resumeAutoplayInterval:3000,playOnce:false,autoActivate_runtime:false,isResponsive:false}); });/* #pamphletu15755 */
 Muse.Utils.fullPage('#page');/* 100% height page */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
@@ -196,6 +659,18 @@ Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
   
   <!--HTML Widget code-->
   
+<script>
+$(document).ready(function(){
+	$('.menu-toggle').on('click',function(){
+		$('.menu-toggle').toggleClass('active');
+	});
+});
+</script>
+	
+<script>
+
+</script>
+	
 
 		
    </body>
