@@ -1,11 +1,12 @@
-<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="http://CharlesMatthews.github.io" resolutions="1x" timestamp="1518304511633">
+<manifest alg="2" build="2018.0.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="http://CharlesMatthews.github.io" resolutions="1x" timestamp="1518305102663">
   <folder name="css">
     <file name="site_global.css" crc="4154280382"/>
-    <file name="about-me.css" crc="4255072456" ref="about-me"/>
+    <file name="about-me.css" crc="373400589" ref="about-me"/>
     <file name="index.css" crc="4129412571" ref="index"/>
     <file name="nomq_index.css" crc="3848101272" ref="index"/>
     <file name="misc.css" crc="190804701" ref="misc"/>
     <file name="projects.css" crc="4212663477" ref="projects"/>
+    <file name="nomq_about-me.css" crc="218922208" ref="about-me"/>
   </folder>
   <folder name="assets">
     <file name="cursor.ico" crc="506857142" seo="true" mt="1479937884000"/>
@@ -17,7 +18,7 @@
     <file name="whatinput.js" crc="86476730" ref="index:about-me:misc:projects"/>
     <file name="museconfig.js" crc="4153641093" ref="index:about-me:misc:projects"/>
     <file name="jquery.watch.js" crc="99325471" ref="index:about-me:misc:projects"/>
-    <file name="jquery.museresponsive.js" crc="3955820958" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="3955820958" ref="index:about-me"/>
     <file name="require.js" crc="4157109226" ref="index:about-me:misc:projects"/>
     <file name="webpro.js" crc="242022427" ref="misc:about-me"/>
     <file name="musewpslideshow.js" crc="457073769" ref="misc:about-me"/>
@@ -25,7 +26,7 @@
     <file name="touchswipe.js" crc="4066113679" ref="misc:about-me"/>
   </folder>
   <folder name="images">
-    <file name="favicon.ico" crc="3770389445" ref="index"/>
+    <file name="favicon.ico" crc="3770389445" ref="index:about-me"/>
     <file name="img_20170809_135218 (1).jpg" crc="467792258" seo="true" ref="index">
       <caption webpage="index" alt=""/>
       <caption webpage="index" alt=""/>
@@ -37,9 +38,10 @@
       <caption webpage="index" alt=""/>
     </file>
     <file name="u12950-4.png" crc="4274560076" ref="index"/>
-    <file name="blank.gif" crc="4208392903" ref="index:misc"/>
+    <file name="blank.gif" crc="4208392903" ref="index:misc:about-me"/>
     <file name="u11626-62.png" crc="3800553449" ref="index"/>
     <file name="sky-12.jpg" crc="67604782" ref="about-me">
+      <caption webpage="about-me" alt=""/>
       <caption webpage="about-me" alt=""/>
     </file>
     <file name="cactus.jpg" crc="491424337" seo="true" ref="misc">
@@ -55,6 +57,7 @@
     <file name="u15314-6.png" crc="141199862" ref="about-me"/>
     <file name="img_20170809_135218.jpg" crc="354855415" seo="true" ref="about-me">
       <caption webpage="about-me" alt=""/>
+      <caption webpage="about-me" alt=""/>
     </file>
     <file name="u15454-4.png" crc="4028704543" ref="about-me"/>
     <file name="img_8128-animation.gif" crc="4246577148" seo="true" ref="about-me">
@@ -66,9 +69,11 @@
     <file name="img_8984-animation.gif" crc="3824858179" seo="true" ref="about-me">
       <caption webpage="about-me" alt=""/>
     </file>
+    <file name="u15314-62.png" crc="141199862" ref="about-me"/>
+    <file name="u15454-42.png" crc="93711336" ref="about-me"/>
   </folder>
   <file name="index.html" crc="4161154743" seo="true" mt="1518304502358" redirect="true"/>
-  <file name="about-me.html" crc="169264294" seo="true" mt="1518304492878" redirect="true"/>
+  <file name="about-me.html" crc="4137053394" seo="true" mt="1518305088054" redirect="true"/>
   <file name="misc.html" crc="3957841250" seo="true" mt="1518298787642" redirect="true"/>
   <file name="projects.html" crc="3985347898" seo="true" mt="1518304332950" redirect="false"/>
 </manifest>
